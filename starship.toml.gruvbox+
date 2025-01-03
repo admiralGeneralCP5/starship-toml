@@ -35,14 +35,15 @@ another_green = '#008000'
 [os]
 disabled = false
 style = "bg:color_orange fg:color_fg0"
+format = "[$symbol ](style)"
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "󰕈 "
+Ubuntu = "󰕈"
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = "󰀵 "
+Macos = "󰀵"
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"

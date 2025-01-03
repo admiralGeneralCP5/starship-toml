@@ -5,7 +5,6 @@ format = """
 [╭](color_fg0)\
 [](color_grey)\
 $os\
-$username\
 $directory\
 $git_branch\
 $git_status\
