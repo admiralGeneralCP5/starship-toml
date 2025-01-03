@@ -1,7 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 palette = "10k"
 
-
 format = """
 [╭](color_fg0)\
 [](color_grey)\

@@ -15,36 +15,35 @@ palette = "10k"
 
 format = """
 [╭](color_fg0)\
-[](grey)\
+[](color_grey)\
 $os\
 $username\
 $directory\
 $git_branch\
 $git_status\
-[](fg:grey)\
+[](fg:color_grey)\
 $fill\
-[](fg:grey)\
+[](fg:color_grey)\
 $character\
 $cmd_duration\
 $python\
-[](grey)\
+[](color_grey)\
 $line_break[╰─ ](bold fg:color_fg0)"""
 
 [palettes.10k]
-grey = '#404040'
-blue = '#00bafa'
+color_grey = '#404040'
+color_blue = '#00bafa'
 color_fg0 = '#fbf1c7'
-color_green = '#98971a'
-bright_green = '#00cd00'
+color_red = '#8c1919'
+color_green = '#00cd00'
 color_aqua = '#689d6a'
 dracula_purple = '#bd93f9'
 dracula_yellow = '#f1fa8c'
 dracula_red = '#ff5555'
-color_purple = '#b16286'
 
 [os]
 disabled = false
-style = "bg:grey fg:color_fg0"
+style = "bg:color_grey fg:color_fg0"
 format = "[$symbol ]($style)"
 
 [os.symbols]
@@ -71,7 +70,7 @@ RedHatEnterprise = "󱄛"
 Pop = ""
 
 [directory]
-style = "fg:blue bg:grey"
+style = "fg:color_blue bg:color_grey"
 format = "[$path ]($style)"
 fish_style_pwd_dir_length = 1
 truncation_length = 2
@@ -80,12 +79,12 @@ truncation_symbol = "…/"
 [git_branch]
 disabled = false
 symbol = ""
-style = "fg:color_aqua bg:grey"
-format = '[[ ](bg:grey fg:blue)$symbol $branch ]($style)'
+style = "fg:color_aqua bg:color_grey"
+format = '[[ ](bg:color_grey fg:color_blue)$symbol $branch ]($style)'
 
 [git_status]
 disabled = false
-style = "fg:blue bg:grey"
+style = "fg:color_blue bg:color_grey"
 format = '[$all_status$ahead_behind]($style)'
 
 [fill]
@@ -93,27 +92,26 @@ symbol = ' '
 
 [character]
 disabled = false
-success_symbol = '[  ](bold fg:bright_green bg:grey)'
-error_symbol = '[  ](bold fg:dracula_red bg:grey)'
-vimcmd_symbol = '[  ](bold fg:dracula_purple bg:grey)'
-vimcmd_replace_one_symbol = '[  ](bold fg:dracula_purple bg:grey)'
-vimcmd_replace_symbol = '[  ](bold fg:dracula_red bg:grey)'
-vimcmd_visual_symbol = '[  ](bold fg:dracula_yellow  bg:grey)'
+success_symbol = '[  ](bold fg:color_green bg:color_grey)'
+error_symbol = '[  ](bold fg:dracula_red bg:color_grey)'
+vimcmd_symbol = '[  ](bold fg:dracula_purple bg:color_grey)'
+vimcmd_replace_one_symbol = '[  ](bold fg:dracula_purple bg:color_grey)'
+vimcmd_replace_symbol = '[  ](bold fg:dracula_red bg:color_grey)'
+vimcmd_visual_symbol = '[  ](bold fg:dracula_yellow  bg:color_grey)'
 format = '$symbol'
 
 [cmd_duration]
-style = "fg:blue bg:grey"
-format = '[ [](fg:blue bg:grey) 󱦟 $duration]($style)'
+style = "fg:color_blue bg:color_grey"
+format = '[ [](fg:color_blue bg:color_grey) 󱦟 $duration]($style)'
 
 [python]
 symbol = ""
-style = "bg:grey fg:blue"
+style = "bg:color_grey fg:color_blue"
 pyenv_version_name = false
 detect_extensions = []
 detect_files = []
-format = '[[ ](fg:blue bg:grey) $symbol $virtualenv]($style)'
+format = '[[ ](fg:color_blue bg:color_grey) $symbol $virtualenv]($style)'
 ```
-
 
 # gruvboxExtra
 
@@ -245,7 +243,7 @@ $python\
 """
 
 [palettes.simple]
-blue = '#00bafa'
+color_blue = '#00bafa'
 color_red = '#8c1919'
 dracula_purple = '#bd93f9'
 dracula_yellow = '#f1fa8c'
@@ -254,7 +252,7 @@ color_orange = '#d65d0e'
 
 [hostname]
 ssh_only = false
-format = '[$hostname](blue) '
+format = '[$hostname](color_blue) '
 disabled = false
 
 [directory]
@@ -275,7 +273,7 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[󰘍 ](bold fg:blue)'
+success_symbol = '[󰘍 ](bold fg:color_blue)'
 error_symbol = '[󰘍 ](bold fg:color_red)'
 vimcmd_symbol = '[ ](bold fg:dracula_purple)'
 vimcmd_replace_one_symbol = '[ ](bold fg:dracula_purple)'
