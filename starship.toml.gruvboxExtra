@@ -1,0 +1,102 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+palette = "gruvbox_extra"
+
+format = """
+[](color_orange)\
+$os\
+[](bg:color_yellow fg:color_orange)\
+$directory\
+[](fg:color_yellow bg:color_aqua)\
+$git_branch\
+$git_status\
+[](color_aqua)\
+$fill\
+[ ](color_bg3)\
+$cmd_duration\
+[ ](fg:color_blue bg:color_bg3)\
+$python\
+[ ](color_blue)\
+$line_break$character"""
+
+[palettes.gruvbox_extra]
+color_fg0 = '#fbf1c7'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_orange = '#d65d0e'
+color_red = '#f38ba8'
+color_yellow = '#d79921'
+dracula_purple = '#bd93f9'
+dracula_yellow = '#f1fa8c'
+dracula_red = '#ff5555'
+another_green = '#008000'
+
+[os]
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[directory]
+style = "fg:color_fg0 bg:color_yellow"
+#format = "[  $path ]($style)"
+format = "[ $path ]($style)"
+fish_style_pwd_dir_length = 1
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+
+[git_status]
+style = "bg:color_aqua"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+style = "fg:color_fg0 bg:color_bg3"
+format = '[ 󱦟 $duration]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_blue fg:color_fg0"
+pyenv_version_name = false
+detect_extensions = []
+detect_files = []
+format = '[ $symbol $virtualenv]($style)'
+
+[character]
+disabled = false
+success_symbol = '[󰘍 ](bold fg:another_green)'
+error_symbol = '[󰘍 ](bold fg:color_red)'
+vimcmd_symbol = '[ ](bold fg:dracula_purple bg:grey)'
+vimcmd_replace_one_symbol = '[ ](bold fg:dracula_purple bg:grey)'
+vimcmd_replace_symbol = '[ ](bold fg:dracula_red bg:grey)'
+vimcmd_visual_symbol = '[ ](bold fg:dracula_yellow  bg:grey)'
+

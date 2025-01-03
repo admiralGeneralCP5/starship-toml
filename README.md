@@ -17,7 +17,6 @@ format = """
 [╭](color_fg0)\
 [](color_grey)\
 $os\
-$username\
 $directory\
 $git_branch\
 $git_status\
@@ -123,6 +122,7 @@ Based off of [Gruvbox Rainbow](https://starship.rs/presets/gruvbox-rainbow) them
 "$schema" = 'https://starship.rs/config-schema.json'
 palette = "gruvbox_extra"
 
+
 format = """
 [](color_orange)\
 $os\
@@ -156,14 +156,15 @@ another_green = '#008000'
 [os]
 disabled = false
 style = "bg:color_orange fg:color_fg0"
+format = "[$symbol ]($style)"
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "󰕈 "
+Ubuntu = "󰕈"
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = "󰀵 "
+Macos = "󰀵"
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
