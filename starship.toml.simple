@@ -1,0 +1,61 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+palette = "simple"
+
+format = """
+$hostname\
+$directory\
+$fill\
+$localip\
+$line_break$character\
+"""
+
+right_format = """
+$python\
+"""
+
+[palettes.simple]
+blue = '#00bafa'
+color_red = '#8c1919'
+dracula_purple = '#bd93f9'
+dracula_yellow = '#f1fa8c'
+dracula_red = '#ff5555'
+color_orange = '#d65d0e'
+
+[hostname]
+ssh_only = false
+format = '[$hostname](blue) '
+disabled = false
+
+[directory]
+style = "fg:dracula_purple"
+format = "[ $path]($style)"
+fish_style_pwd_dir_length = 1
+truncation_length = 2
+truncation_symbol = "…/"
+
+[fill]
+symbol = ' '
+
+[localip]
+ssh_only = false
+style = "dracula_red"
+format = '[$localipv4]($style)'
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[󰘍 ](bold fg:blue)'
+error_symbol = '[󰘍 ](bold fg:color_red)'
+vimcmd_symbol = '[ ](bold fg:dracula_purple)'
+vimcmd_replace_one_symbol = '[ ](bold fg:dracula_purple)'
+vimcmd_replace_symbol = '[ ](bold fg:dracula_red)'
+vimcmd_visual_symbol = '[ ](bold fg:dracula_yellow)'
+
+[python]
+symbol = ""
+style = "color_orange"
+pyenv_version_name = false
+detect_extensions = []
+detect_files = []
+format = '[$symbol $virtualenv]($style)'
+
