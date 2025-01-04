@@ -122,7 +122,6 @@ Based off of [Gruvbox Rainbow](https://starship.rs/presets/gruvbox-rainbow) them
 "$schema" = 'https://starship.rs/config-schema.json'
 palette = "gruvbox_extra"
 
-
 format = """
 [](color_orange)\
 $os\
@@ -133,11 +132,8 @@ $git_branch\
 $git_status\
 [](color_aqua)\
 $fill\
-[ ](color_bg3)\
 $cmd_duration\
-[ ](fg:color_blue bg:color_bg3)\
 $python\
-[ ](color_blue)\
 $line_break$character"""
 
 [palettes.gruvbox_extra]
@@ -156,15 +152,14 @@ another_green = '#008000'
 [os]
 disabled = false
 style = "bg:color_orange fg:color_fg0"
-format = "[$symbol ]($style)"
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "󰕈"
+Ubuntu = "󰕈 "
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = "󰀵"
+Macos = "󰀵 "
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
@@ -203,7 +198,7 @@ symbol = ' '
 
 [cmd_duration]
 style = "fg:color_fg0 bg:color_bg3"
-format = '[ 󱦟 $duration]($style)'
+format = '[[](color_bg3)󱦟 $duration]($style)[](color_bg3)'
 
 [python]
 symbol = ""
@@ -211,7 +206,7 @@ style = "bg:color_blue fg:color_fg0"
 pyenv_version_name = false
 detect_extensions = []
 detect_files = []
-format = '[ $symbol $virtualenv]($style)'
+format = '[[](color_blue)$symbol $virtualenv]($style)[](color_blue)'
 
 [character]
 disabled = false
